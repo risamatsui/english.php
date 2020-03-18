@@ -21,6 +21,7 @@
 | words       | varchar(30) |          |            | タスクの題名が入る   |
 | meaning     | varchar(30) |          |            | タスクの詳細が入る   |
 
+aaaaaaaaaaaaaaaaaaaa
 
 ## その他
 - PHPを入れること、実装の時どういう動きをするのか想像しながら作成
