@@ -14,7 +14,7 @@
         <div class="row">
             <div class="header">
                 <nav class="navbar navbar-dark bg-dark">
-                    <a href="index.php" class="navbar-brand">Home</a>
+                    <a href="index.html" class="navbar-brand">Home</a>
                 </nav>
             </div>
         </div>
