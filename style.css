@@ -1,0 +1,13 @@
+.hello{
+    display: flex;
+    justify-content: space-around;
+}
+
+header{
+    background-color: darksalmon;
+}
+
+.apple{
+    display: flex;
+    justify-content: space-around;
+}
