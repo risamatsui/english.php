@@ -7,7 +7,44 @@ header{
     background-color: darksalmon;
 }
 
-.apple{
+
+/* .question{
+    display: flex;
+    justify-content: center;
+    background-color: darksalmon;
+} */
+
+.one{
     display: flex;
     justify-content: space-around;
+}
+
+.two{
+    display: flex;
+    justify-content: space-around;
+}
+
+.three{
+    display: flex;
+    justify-content: space-around;
+}
+
+.header{
+    background-color: darksalmon;
+    height: 10vh;
+}
+.navbar-brand{
+    display: inline-block;
+    padding: 0.3em 2em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    margin-left: 90px;
+    margin-top: 15px;
+}
+.navbar-brand{
+    background: white;
+    color:black;
 }
