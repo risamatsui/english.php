@@ -45,4 +45,12 @@ class Post
         return $posts;
     }
 
+    public function create($data)
+    {
+        // SQLを準備
+        $stmt = $this->db_manager->dbh->prepare('INSERT INTO '  . $this->table .  ' (words,meaning) VALUES (?,?)');
+        // 実行
+        $stmt->execute($data);
+    }
+
 }
