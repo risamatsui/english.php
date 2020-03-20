@@ -14,7 +14,7 @@
         <div class="row">
             <div class="header">
                 <nav class="navbar navbar-dark bg-dark">
-                    <a href="index.html" class="navbar-brand">Home</a>
+                    <a href="index.php" class="navbar-brand">Home</a>
                 </nav>
             </div>
         </div>
@@ -23,12 +23,12 @@
             <div class="col-12">
                 <form action="store.php" method="post">
                     <div class="form-group">
-                        <label for="title">Words</label><br>
-                        <input type="text" class="form-control" name="title" id="title">
+                        <label for="words">Words</label><br>
+                        <input type="text" class="form-control" name="words" id="words">
                     </div>
                     <div class="form-group">
-                        <label for="contents">Meaning</label><br>
-                        <textarea class="form-control" name="contents" id="contents" cols="30" rows="10"></textarea>
+                        <label for="meaning">Meaning</label><br>
+                        <textarea class="form-control" name="meaning" id="meaning" cols="30" rows="10"></textarea>
                     </div>
                     <div class="d-flex justify-content-end">
                         <button type="submit" class="btn btn-primary">Next words</button>
