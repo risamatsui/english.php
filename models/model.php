@@ -53,4 +53,29 @@ class Post
         $stmt->execute($data);
     }
 
+    public function delete($data)
+    {
+        // 削除処理
+        // 準備
+        $stmt = $this->db_manager->dbh->prepare('DELETE FROM ' . $this->table . ' WHERE id = ?');
+        // 実行
+        return $stmt->execute($data);
+    }
+
+    public function findById($id)
+    {
+        // $idと一致するidをもつレコードを取得する
+
+        // 準備する
+        $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table . ' WHERE id = ?');
+
+        // 実行する
+        $stmt->execute([$id]);
+
+        // 実行結果を変数に代入する
+        $post = $stmt->fetch();
+
+        // 結果を関数の呼び出し元に返す
+        return $post;
+    }
 }

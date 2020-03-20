@@ -1,15 +1,16 @@
 <?php
 
 //ファイルの読み込み
- require_once("Models/Task.php");
+ require_once("./models/model.php");
 
  //データの受け取り
- $id = $_POST["id"];
+ $id = $_POST['id'];
 
+ var_dump(['']);
  //DBからデータの削除
- $task = new Task();
- $task->delete([$id]);
+//  $post = new Post();
+//  $post->delete([$id]);
 
- //リダイレクト
- header("location: index.php");
- exit;
+//  //リダイレクト
+//  header("location: index.php");
+//  exit;
