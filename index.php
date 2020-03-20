@@ -32,7 +32,6 @@
                 <nav class="navbar navbar-dark bg-dark">
                     <a href="./test.php" class="navbar-brand">lets test</a>
                     <a href="./create.php" class="navbar-brand">create</a>
-                    <a href="./delete.php" class="navbar-brand">delete</a>
                 </nav>
             </div>
         </div>
@@ -46,13 +45,18 @@
     <?php foreach ($posts as $post) : ?>
     <div class="fruit">
         <div class="one">
-            <input type="checkbox" name=“sample” value="1">
-                <div class="question">
-                   <?= h($post["meaning"]); ?>
-                </div> 
-                <div class="answer">
-                   <?= h($post["words"]); ?>
-                </div>
+            <div class="question">
+                <?= h($post["meaning"]); ?>
+            </div> 
+            <div class="answer">
+                <?= h($post["words"]); ?>
+            </div>
+            <div class="text-right d-flex justify-content-end">
+                <form action="delete.php" method="post">
+                    <input type="hidden" name="id" value="<?= h($post['id']); ?>">
+                    <button type="submit" class="btn text-danger">DELETE</button>
+                </form>
+            </div>        
         </div>
     </div>
     <?php endforeach; ?>
