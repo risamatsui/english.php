@@ -2,10 +2,10 @@
 
 require_once('dbconnect.php');
 
-class Model
+class Post
 {
     // プロパティ
-    protected $table;
+    protected $table = 'post';
     protected $db_manager;
 
     // インスタンス化した時に呼ばれるメソッド
@@ -17,7 +17,6 @@ class Model
         $this->db_manager->connect();
     }
 
-    // DBからデータを全て取得するメソッド
     public function getAll()
     {
         // 実行するSQLを準備
@@ -31,7 +30,7 @@ class Model
         // prepare
         // dbhのメソッド
         // PDOインスタンスのメソッド
-        $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table . ' ORDER BY created DESC');
+        $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table);
 
         // $dbh === PDOクラスのインスタンス
         // $dbh->prepare('SELECT * FROM ' . $this->table);
@@ -40,8 +39,10 @@ class Model
         $stmt->execute();
 
         // 実行結果を取得
-        $tasks = $stmt->fetchAll();
+        $posts = $stmt->fetchAll();
 
         // return === 関数の呼び出し元に、値を返す
-        return $tasks;
+        return $posts;
     }
+
+}
